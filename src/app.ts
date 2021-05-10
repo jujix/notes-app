@@ -1,6 +1,12 @@
 const yargs = require("yargs");
 const notes = require("./notes");
 
+interface Argv {
+  title: string,
+  body: string
+}
+
+
 // Customize yargs version
 yargs.version("1.1.0");
 
@@ -19,7 +25,7 @@ yargs.command({
       type: "string",
     },
   },
-  handler(argv) {
+  handler(argv: Argv) {
     notes.addNote(argv.title, argv.body);
   },
 });
@@ -34,7 +40,7 @@ yargs.command({
       type: "string",
     },
   },
-  handler(argv) {
+  handler(argv: Argv) {
     notes.removeNote(argv.title);
   },
 });
@@ -57,7 +63,7 @@ yargs.command({
       type: "string",
     },
   },
-  handler(argv) {
+  handler(argv: Argv) {
     notes.readNote(argv.title);
   },
 });

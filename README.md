@@ -12,7 +12,7 @@ npm run build
 node dist/app.js add --title="t" --body="b"
 ```
 
-## Renove note note
+## Remove note
 
 ```
 node dist/app.js remove --title="t"
@@ -23,7 +23,7 @@ node dist/app.js remove --title="t"
 node dist/app.js list
 ```
 
-## Read notes
+## Read note
 ```
 node dist/app.js read --title="t" --body="b"
 ```
